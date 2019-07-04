@@ -1,0 +1,3 @@
+i am learning php. 
+php is scripting language.
+php is very good language.

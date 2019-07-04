@@ -1,0 +1,35 @@
+<html>
+	<head>
+		<style>
+			.php_coding{ width:900px; margin: 0 auto; background:#ddd;}
+			.headeroption, .footeroption{ background:#444;color:#fff;padding:20px;text-align:center;}
+			.maincontent{ min-height: 400px; padding: 20px;}
+			.headeroption h2, .footeroption h2{ margin:0;}
+		</style>
+	</head>
+	<body>
+		<div class="php_coding">
+			<section class="headeroption">
+				<h2>php Fundamentals Training</h2>
+			</section>
+			<section class="maincontent">
+				<?php
+						if(isset($_FILES['image'])){
+							$filename = $_FILES['image']['name'];
+							$filtamp = $_FILES['image']['tmp_name'];
+							move_uploaded_file($filtamp,"image/".$filename);
+							echo "file uplaod succesfully";
+						}
+				?>
+				<form method="POST" action="" enctype="multipart/form-data">
+					<input type ="file" name="image">
+					<input type="submit" value="submit">
+				</form>
+				
+			</section>
+			<section class="footeroption">
+				<h2> <?php echo"www.trainingwithliveproject.com"; ?> </h2>
+			</section>
+		</div>
+	</body
+</html>
